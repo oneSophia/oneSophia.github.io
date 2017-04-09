@@ -87,16 +87,34 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="今天把java的socket网络编程总结一下，也是为之后的网络编程深入学习留个参考。
+一、客户端和服务器端的通信实现的功能：客户端将信息发送给服务器端，服务器端接受到信息后，将相同的信息发送到客户端。实现步骤：  服务器端：
+
+创建SocketServer对象，绑定侦听端口
+通过accept方法侦听客户端请求，获得一个socket
+建立连接后，通过输入流接收客户端发送的信息
+通过输出流发送相同">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://onesophia.github.io/2017/03/16/hello-world/index.html">
+<meta property="og:title" content="java socekt网络编程">
+<meta property="og:url" content="http://onesophia.github.io/2017/04/09/java-socekt网络编程/index.html">
 <meta property="og:site_name" content="跳动的字母">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2017-04-09T08:34:44.871Z">
+<meta property="og:description" content="今天把java的socket网络编程总结一下，也是为之后的网络编程深入学习留个参考。
+一、客户端和服务器端的通信实现的功能：客户端将信息发送给服务器端，服务器端接受到信息后，将相同的信息发送到客户端。实现步骤：  服务器端：
+
+创建SocketServer对象，绑定侦听端口
+通过accept方法侦听客户端请求，获得一个socket
+建立连接后，通过输入流接收客户端发送的信息
+通过输出流发送相同">
+<meta property="og:updated_time" content="2017-04-09T09:01:53.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="java socekt网络编程">
+<meta name="twitter:description" content="今天把java的socket网络编程总结一下，也是为之后的网络编程深入学习留个参考。
+一、客户端和服务器端的通信实现的功能：客户端将信息发送给服务器端，服务器端接受到信息后，将相同的信息发送到客户端。实现步骤：  服务器端：
+
+创建SocketServer对象，绑定侦听端口
+通过accept方法侦听客户端请求，获得一个socket
+建立连接后，通过输入流接收客户端发送的信息
+通过输出流发送相同">
 
 
 
@@ -124,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://onesophia.github.io/2017/03/16/hello-world/"/>
+  <link rel="canonical" href="http://onesophia.github.io/2017/04/09/java-socekt网络编程/"/>
 
 
 
 
 
-  <title> Hello World | 跳动的字母 </title>
+  <title> java socekt网络编程 | 跳动的字母 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://onesophia.github.io/2017/03/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://onesophia.github.io/2017/04/09/java-socekt网络编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sophia Ma">
@@ -280,7 +298,7 @@
             
             
               
-                Hello World
+                java socekt网络编程
               
             
           </h1>
@@ -295,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T10:31:44+08:00">
-                2017-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T16:33:59+08:00">
+                2017-04-09
               </time>
             
 
@@ -314,8 +332,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/16/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/16/hello-world/" itemprop="commentCount"></span>
+                <a href="/2017/04/09/java-socekt网络编程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/09/java-socekt网络编程/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -341,15 +359,15 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>　　今天把java的socket网络编程总结一下，也是为之后的网络编程深入学习留个参考。</p>
+<h1 id="一、客户端和服务器端的通信"><a href="#一、客户端和服务器端的通信" class="headerlink" title="一、客户端和服务器端的通信"></a>一、客户端和服务器端的通信</h1><p>实现的功能：客户端将信息发送给服务器端，服务器端接受到信息后，将相同的信息发送到客户端。<br>实现步骤：<br>  服务器端：</p>
+<ol>
+<li>创建SocketServer对象，绑定侦听端口</li>
+<li>通过accept方法侦听客户端请求，获得一个socket</li>
+<li>建立连接后，通过输入流接收客户端发送的信息</li>
+<li>通过输出流发送相同信息到客户端</li>
+<li>关闭资源<br>客户端：<br>1.创建Socket对象，指明需要连接的服务器端的ip地址和端口号<br>2.建立连接后，通过输出流向服务器端发送信息<br>3.通过输入流接收服务器端发送回来的信息<br>4.关闭资源<br>服务器端程序<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">  <span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStream;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.io.PrintWriter;</div><div class="line"><span class="keyword">import</span> java.net.ServerSocket;</div><div class="line"><span class="keyword">import</span> java.net.Socket;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServer</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		<span class="comment">//获取server的套接字</span></div><div class="line">		ServerSocket server=<span class="keyword">new</span> ServerSocket(<span class="number">8800</span>);</div><div class="line">		System.out.println(<span class="string">"开始侦听8800端口..."</span>);</div><div class="line">		Socket socket=server.accept();</div><div class="line">		<span class="comment">//获得字节输入流</span></div><div class="line">		InputStream is= socket.getInputStream();</div><div class="line">		<span class="comment">//转换成字符输入流</span></div><div class="line">		InputStreamReader isr=<span class="keyword">new</span> InputStreamReader(is);</div><div class="line">		<span class="comment">//转换成字符缓冲流</span></div><div class="line">		BufferedReader br=<span class="keyword">new</span> BufferedReader(isr);</div><div class="line">		<span class="comment">//读取客户端发送的信息并输出到调试窗口</span></div><div class="line">		<span class="comment">//String br=null;</span></div><div class="line">		String info=<span class="keyword">null</span>;</div><div class="line">		PrintWriter pw= <span class="keyword">new</span> PrintWriter(socket.getOutputStream());</div><div class="line">		System.out.println(<span class="string">"我是服务器端，我准备向客户端发送信息..."</span>);</div><div class="line">		<span class="keyword">while</span>((info=br.readLine())!=<span class="keyword">null</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"我正由客户端发过来:"</span>+info+<span class="string">"并将要被发送回客户端"</span>);</div><div class="line">			pw.write(info);</div><div class="line">			pw.flush();</div><div class="line">		&#125;</div><div class="line">		socket.shutdownInput();</div><div class="line">		<span class="comment">//获得输出流</span></div><div class="line"><span class="comment">//		PrintWriter pw= new PrintWriter(socket.getOutputStream());</span></div><div class="line"><span class="comment">//		System.out.println("我是服务器端，我准备向客户端发送信息...");</span></div><div class="line"><span class="comment">//		pw.write("服务器端欢迎您！！！！！");</span></div><div class="line"><span class="comment">//		pw.flush();</span></div><div class="line">		socket.shutdownOutput();</div><div class="line">		<span class="comment">//关闭资源</span></div><div class="line">		pw.close();</div><div class="line">		br.close();</div><div class="line">		isr.close();</div><div class="line">		is.close();</div><div class="line">		socket.close();</div><div class="line">		server.close();</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
@@ -386,15 +404,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/02/数据结构之查找/" rel="next" title="数据结构之查找">
+                <i class="fa fa-chevron-left"></i> 数据结构之查找
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/16/博客开篇/" rel="prev" title="博客开篇">
-                博客开篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -420,8 +438,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/16/hello-world/"
-           data-title="Hello World" data-url="http://onesophia.github.io/2017/03/16/hello-world/">
+      <div class="ds-thread" data-thread-key="2017/04/09/java-socekt网络编程/"
+           data-title="java socekt网络编程" data-url="http://onesophia.github.io/2017/04/09/java-socekt网络编程/">
       </div>
     
   </div>
@@ -541,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、客户端和服务器端的通信"><span class="nav-number">1.</span> <span class="nav-text">一、客户端和服务器端的通信</span></a></li></ol></div>
             
 
           </div>
