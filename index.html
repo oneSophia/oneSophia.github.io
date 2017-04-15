@@ -257,6 +257,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://onesophia.github.io/2017/04/15/第一个struts框架应用-HelloWorld/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sophia Ma">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/updownloads/pic.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跳动的字母">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/第一个struts框架应用-HelloWorld/" itemprop="url">
+                  第一个struts框架应用---HelloWorld
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T21:10:08+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/15/第一个struts框架应用-HelloWorld/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/15/第一个struts框架应用-HelloWorld/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在编写之前，先要经历的步骤是</p>
+<ol>
+<li>创建web project</li>
+<li>导入所有struts2需要的jar包（myeclipse只要在file下拉选项中选择myeclipse等自动安装struts）</li>
+</ol>
+<h1 id="一、配置web-xml文件"><a href="#一、配置web-xml文件" class="headerlink" title="一、配置web.xml文件"></a>一、配置web.xml文件</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line">&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0"&gt;</div><div class="line">  &lt;display-name&gt;HelloWord&lt;/display-name&gt;</div><div class="line">  &lt;filter&gt;</div><div class="line">    &lt;filter-name&gt;struts2&lt;/filter-name&gt;</div><div class="line">    &lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</div><div class="line">  &lt;/filter&gt;</div><div class="line">  &lt;filter-mapping&gt;</div><div class="line">    &lt;filter-name&gt;struts2&lt;/filter-name&gt;</div><div class="line">    &lt;url-pattern&gt;*.action&lt;/url-pattern&gt;</div><div class="line">  &lt;/filter-mapping&gt;</div><div class="line">&lt;/web-app&gt;</div></pre></td></tr></table></figure>
+<h1 id="二、创建struts-xml文档"><a href="#二、创建struts-xml文档" class="headerlink" title="二、创建struts.xml文档"></a>二、创建struts.xml文档</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</div><div class="line">&lt;!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd"&gt;</div><div class="line">&lt;struts&gt;</div><div class="line">&lt;/struts&gt;</div></pre></td></tr></table></figure>
+<h1 id="三、编写入口页面（jsp页面，比如登录页面等）"><a href="#三、编写入口页面（jsp页面，比如登录页面等）" class="headerlink" title="三、编写入口页面（jsp页面，比如登录页面等）"></a>三、编写入口页面（jsp页面，比如登录页面等）</h1><h1 id="四、-编写Action类"><a href="#四、-编写Action类" class="headerlink" title="四、 编写Action类"></a>四、 编写Action类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.immoc.action;</div><div class="line"><span class="keyword">import</span> com.opensymphony.xwork2.ActionSupport;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWordAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> </span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		System.out.println(<span class="string">"执行Action"</span>);</div><div class="line">		<span class="keyword">return</span> SUCCESS;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">add</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> SUCCESS;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="五、编写struts-xml文件"><a href="#五、编写struts-xml文件" class="headerlink" title="五、编写struts.xml文件"></a>五、编写struts.xml文件</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</div><div class="line">&lt;!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd"&gt;</div><div class="line">&lt;struts&gt;</div><div class="line"></div><div class="line">     &lt;package name="default" namespace="/" extends="struts-default" &gt;</div><div class="line">          &lt;action name="add" class="com.immoc.action.HelloWordAction"&gt;</div><div class="line">             &lt;result&gt;/result.jsp&lt;/result&gt;</div><div class="line">          &lt;/action&gt;</div><div class="line">     &lt;/package&gt;</div><div class="line">&lt;/struts&gt;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://onesophia.github.io/2017/04/12/java-socket应用之文件上传器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1272,7 +1411,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
